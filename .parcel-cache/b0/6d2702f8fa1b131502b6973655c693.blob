@@ -1,0 +1,7 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "default", function () {
+  return _registrationDefault.default;
+});
+var _registration = require('./registration');
+var _registrationDefault = _parcelHelpers.interopDefault(_registration);

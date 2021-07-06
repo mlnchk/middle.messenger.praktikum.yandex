@@ -1,0 +1,60 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _utilsTemplator = require("../../../../utils/templator");
+var _utilsTemplatorDefault = _parcelHelpers.interopDefault(_utilsTemplator);
+var _registrationTmplJs = require("./registration.tmpl.js");
+var _registrationTmplJsDefault = _parcelHelpers.interopDefault(_registrationTmplJs);
+require('./registration.scss');
+var _componentsInput = require('../../../../components/input');
+var _componentsInputDefault = _parcelHelpers.interopDefault(_componentsInput);
+var _componentsButton = require('../../../../components/button');
+var _componentsButtonDefault = _parcelHelpers.interopDefault(_componentsButton);
+function registration() {
+  const tmpl = new _utilsTemplatorDefault.default(_registrationTmplJsDefault.default);
+  const context = {
+    mailInput: _componentsInputDefault.default({
+      name: "email",
+      text: "Почта",
+      required: true,
+      type: "email",
+      errorMessage: "Неверная почта"
+    }),
+    loginInput: _componentsInputDefault.default({
+      name: "login",
+      text: "Логин",
+      required: true,
+      errorMessage: "Неверный логин"
+    }),
+    firstNameInput: _componentsInputDefault.default({
+      name: "first_name",
+      text: "Имя",
+      required: true,
+      errorMessage: "Неверное имя"
+    }),
+    secondNameInput: _componentsInputDefault.default({
+      name: "second_name",
+      text: "Фамилия",
+      errorMessage: "Неверная фамилия"
+    }),
+    phoneInput: _componentsInputDefault.default({
+      name: "phone",
+      text: "Телефон",
+      type: "tel",
+      required: true,
+      errorMessage: "Неверный телефон"
+    }),
+    passwordInput: _componentsInputDefault.default({
+      name: "password",
+      text: "Пароль",
+      type: "password",
+      required: true,
+      errorMessage: "Неверный пароль"
+    }),
+    button: _componentsButtonDefault.default({
+      body: "Зарегистрироваться"
+    })
+  };
+  const renderedTemplate = tmpl.compile(context);
+  return renderedTemplate;
+}
+exports.default = registration;

@@ -1,0 +1,22 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _urlNoAvatarSvg = require('url:./noAvatar.svg');
+var _urlNoAvatarSvgDefault = _parcelHelpers.interopDefault(_urlNoAvatarSvg);
+const profilePageTmpl = `
+    <div class="profile-page">
+        <div class="profile-page__aside">
+        <button class="arrow-button"><-</button>
+        </div>
+        <div class="profile-page__content">
+            <div class="profile-page__content-container">
+            <div class="profile-page__avatar">
+                <img src="${_urlNoAvatarSvgDefault.default}" alt="Аватар" class="profile-page__avatar-img">
+                <div class="profile-page__avatar-overlay">Поменять аватар</div>
+            </div>
+            <h1 class="profile-page__header">{{ header }}</h1>
+                {{ content }}
+            </div>
+        </div>
+    </div>
+`;
+exports.default = profilePageTmpl;

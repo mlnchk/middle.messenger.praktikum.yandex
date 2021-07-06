@@ -1,0 +1,40 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _utilsTemplator = require("../../utils/templator");
+var _utilsTemplatorDefault = _parcelHelpers.interopDefault(_utilsTemplator);
+var _profileTmpl = require("./profile.tmpl");
+var _profileTmplDefault = _parcelHelpers.interopDefault(_profileTmpl);
+var _modulesProfileView = require("./modules/profileView");
+var _modulesProfileViewDefault = _parcelHelpers.interopDefault(_modulesProfileView);
+var _modulesProfileEdit = require("./modules/profileEdit");
+var _modulesProfileEditDefault = _parcelHelpers.interopDefault(_modulesProfileEdit);
+var _urlNoAvatarSvg = require("url:./noAvatar.svg");
+var _urlNoAvatarSvgDefault = _parcelHelpers.interopDefault(_urlNoAvatarSvg);
+require('./profile.scss');
+function profilePage(inner = "profileView") {
+  const tmpl = new _utilsTemplatorDefault.default(_profileTmplDefault.default);
+  let context = {};
+  switch (inner) {
+    case "profileEdit":
+      context = {
+        avatar: {
+          noAvatar: _urlNoAvatarSvgDefault.default
+        },
+        header: "Иван",
+        content: _modulesProfileEditDefault.default
+      };
+      break;
+    default:
+      context = {
+        avatar: {
+          img: _urlNoAvatarSvgDefault.default
+        },
+        header: "Иван",
+        content: _modulesProfileViewDefault.default
+      };
+      break;
+  }
+  const renderedTemplate = tmpl.compile(context);
+  return renderedTemplate;
+}
+exports.default = profilePage;

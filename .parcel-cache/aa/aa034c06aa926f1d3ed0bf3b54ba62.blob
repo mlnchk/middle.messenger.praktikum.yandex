@@ -1,0 +1,17 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+const profileEditTmpl = `
+        <div class="profile-edit">
+            {{ mailInput }}
+            {{ loginInput }}
+            {{ firstNameInput }}
+            {{ secondNameInput }}
+            {{ displayNameInput }}
+            {{ phoneInput }}
+
+            <div class="profile-edit__button">
+                {{ button }}
+            </div>
+        </div>
+    `;
+exports.default = profileEditTmpl;

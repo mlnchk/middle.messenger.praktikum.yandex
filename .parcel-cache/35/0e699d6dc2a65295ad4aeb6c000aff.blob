@@ -1,0 +1,29 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _get = require('./get');
+var _getDefault = _parcelHelpers.interopDefault(_get);
+class Templator {
+  TEMPLATE_REGEXP = /\{\{(.*?)\}\}/gi;
+  constructor(template) {
+    this._template = template;
+  }
+  compile(ctx) {
+    return this._compileTemplate(ctx);
+  }
+  _compileTemplate = ctx => {
+    let tmpl = this._template;
+    let key = null;
+    const regExp = this.TEMPLATE_REGEXP;
+    console.log(regExp.exec(tmpl));
+    // Важно делать exec именно через константу, иначе уйдёте в бесконечный цикл
+    while (key = regExp.exec(tmpl)) {
+      if (key[1]) {
+        const tmplValue = key[1].trim();
+        const data = _getDefault.default(ctx, tmplValue);
+        tmpl = tmpl.replace(new RegExp(key[0], "gi"), data);
+      }
+    }
+    return tmpl;
+  };
+}
+exports.default = Templator;

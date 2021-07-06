@@ -1,0 +1,13 @@
+.profile-edit__links {
+  margin-top: 50px;
+}
+.profile-edit__link {
+  border-bottom: 1px solid #EAEAEA;
+  padding: 10px 0px;
+}
+.profile-edit__link_logout {
+  border-bottom: none;
+}
+.profile-edit__link_logout a {
+  color: var(--error-color);
+}

@@ -1,0 +1,7 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "default", function () {
+  return _profileViewDefault.default;
+});
+var _profileView = require('./profileView');
+var _profileViewDefault = _parcelHelpers.interopDefault(_profileView);

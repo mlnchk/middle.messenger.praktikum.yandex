@@ -1,0 +1,35 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _utilsTemplator = require("../../../../utils/templator");
+var _utilsTemplatorDefault = _parcelHelpers.interopDefault(_utilsTemplator);
+var _loginTmplJs = require("./login.tmpl.js");
+var _loginTmplJsDefault = _parcelHelpers.interopDefault(_loginTmplJs);
+require('./login.scss');
+var _componentsInput = require('../../../../components/input');
+var _componentsInputDefault = _parcelHelpers.interopDefault(_componentsInput);
+var _componentsButton = require('../../../../components/button');
+var _componentsButtonDefault = _parcelHelpers.interopDefault(_componentsButton);
+function login() {
+  const tmpl = new _utilsTemplatorDefault.default(_loginTmplJsDefault.default);
+  const context = {
+    loginInput: _componentsInputDefault.default({
+      name: "login",
+      text: "Логин",
+      required: true,
+      errorMessage: "Неверный логин"
+    }),
+    passwordInput: _componentsInputDefault.default({
+      name: "password",
+      text: "Пароль",
+      type: "password",
+      required: true,
+      errorMessage: "Неверный пароль"
+    }),
+    button: _componentsButtonDefault.default({
+      body: "Авторизоваться"
+    })
+  };
+  const renderedTemplate = tmpl.compile(context);
+  return renderedTemplate;
+}
+exports.default = login;
