@@ -7,6 +7,7 @@ import './home.scss';
 
 export default function homePage(inner = "login") {
     const tmpl = Handlebars.compile(homePageTmpl);
+    let context = {};
 
     switch (inner) {
         case "registration":

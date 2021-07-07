@@ -8,7 +8,7 @@ const errorPageTmpl =
         {{ errorText }}
     </div>
     <div class="error-page__link">
-        <a href="/chat">Назад к чатам</a>
+        <a href="/chat-page/">Назад к чатам</a>
     </div>
 </div>
 `;

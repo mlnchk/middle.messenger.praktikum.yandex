@@ -1,10 +1,10 @@
-import noAvatar from 'url:./noAvatar.svg';
+import noAvatar from './noAvatar.svg';
 
 const profilePageTmpl =
     `
     <div class="profile-page">
         <div class="profile-page__aside">
-        <button class="arrow-button"><-</button>
+        <a href="/profile/" class="arrow-button"></a>
         </div>
         <div class="profile-page__content">
             <div class="profile-page__content-container">

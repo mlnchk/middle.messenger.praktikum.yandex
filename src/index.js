@@ -9,34 +9,39 @@ const root = document.querySelector('#root');
 
 let inner = null;
 
-switch (document.location.pathname) {
+const getUrl = (url) => {
+    const regexp = /(\/.*?)\/*$/i;
+    return url.match(regexp)[1];
+}
+
+switch (getUrl(document.location.pathname)) {
     case "/":
         inner = homePage("login");
         break;
-    case "/registration/":
+    case "/registration":
         inner = homePage("registration");
         break;
 
-    case "/profile/":
+    case "/profile":
         inner = profilePage();
         break;
 
-    case "/profile-edit/":
+    case "/profile-edit":
         inner = profilePage("profileEdit");
         break;
 
-    case "/password-edit/":
+    case "/password-edit":
         inner = profilePage("passwordEdit");
         break;
 
-    case "/chat-page/":
+    case "/chat-page":
         inner = chatPage();
         break;
-    case "/404/":
+    case "/404":
         inner = errorPage("404");
         break;
 
-    case "/500/":
+    case "/500":
         inner = errorPage("500");
         break;
 
