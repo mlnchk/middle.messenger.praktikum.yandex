@@ -2,7 +2,6 @@ import Handlebars from "handlebars";
 import profileViewTmpl from "./profileView.tmpl.js";
 import './profileView.scss';
 import input from '../../../../components/input';
-import button from '../../../../components/button';
 
 
 export default function profileView() {
