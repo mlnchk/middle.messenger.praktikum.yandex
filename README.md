@@ -13,11 +13,11 @@ Netlify - [https://garipova.netlify.app/]
 
 ## Страницы
 Страницы доступны по ссылкам:
-/
-/registration
-/chat-page
-/404
-/500
-/profile
-/profile-edit
-/password-edit
+- /
+- /registration
+- /chat-page
+- /404
+- /500
+- /profile
+- /profile-edit
+- /password-edit
