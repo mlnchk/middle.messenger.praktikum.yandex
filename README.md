@@ -1,6 +1,6 @@
 ## yandex praktikum course Middle frontend developer - sprint_1
 
-- `npm run start` — start project on Express,
+- `npm run start` — start project,
 - `npm run dev` — Parcel run in development mode,
 - `npm run build` — Parcel run in production mode.
 
