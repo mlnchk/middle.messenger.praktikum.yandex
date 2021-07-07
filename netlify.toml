@@ -8,3 +8,9 @@
 [build]
   publish = "dist"
   command = "npm run build"
+
+[[redirects]]
+from = "/registration"
+to = "/"
+status = 200
+force = true
