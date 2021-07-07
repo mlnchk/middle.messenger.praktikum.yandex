@@ -1,15 +1,13 @@
-import Templator from "../../utils/templator";
+import Handlebars from "handlebars";
 import buttonTmpl from "./button.tmpl.js";
 import './button.scss';
 
 export default function button({ body }) {
 
-    const tmpl = new Templator(buttonTmpl);
+    const tmpl = Handlebars.compile(buttonTmpl);
 
     const context = { body };
 
-    const renderedTemplate = tmpl.compile(context);
-
-    return renderedTemplate;
+    return tmpl(context);
 
 }

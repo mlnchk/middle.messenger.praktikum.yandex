@@ -1,6 +1,5 @@
 const inputTmpl =
     `<div class="input">
-        <label class="input__label" for="{{ name }}">{{ text }}</label>
         <input 
             type="{{ type }}" 
             name="{{ name }}" 

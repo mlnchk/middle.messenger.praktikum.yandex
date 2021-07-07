@@ -13,7 +13,7 @@ const profilePageTmpl =
                 <div class="profile-page__avatar-overlay">Поменять аватар</div>
             </div>
             <h1 class="profile-page__header">{{ header }}</h1>
-                {{ content }}
+                {{{ content }}}
             </div>
         </div>
     </div>

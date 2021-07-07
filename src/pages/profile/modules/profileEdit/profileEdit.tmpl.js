@@ -1,15 +1,15 @@
 const profileEditTmpl =
     `
         <div class="profile-edit">
-            {{ mailInput }}
-            {{ loginInput }}
-            {{ firstNameInput }}
-            {{ secondNameInput }}
-            {{ displayNameInput }}
-            {{ phoneInput }}
+            {{{ mailInput }}}
+            {{{ loginInput }}}
+            {{{ firstNameInput }}}
+            {{{ secondNameInput }}}
+            {{{ displayNameInput }}}
+            {{{ phoneInput }}}
 
             <div class="profile-edit__button">
-                {{ button }}
+                {{{ button }}}
             </div>
         </div>
     `;

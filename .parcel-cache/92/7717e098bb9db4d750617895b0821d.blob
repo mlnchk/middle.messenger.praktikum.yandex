@@ -1,1 +1,0 @@
-module.exports = require('./bundle-url').getBundleURL() + "noAvatar.HASH_REF_4f614bb67b8bce2d29748f563eeaab0e.svg"

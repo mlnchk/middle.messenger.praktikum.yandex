@@ -1,4 +1,4 @@
-import Templator from "../../../../utils/templator";
+import Handlebars from "handlebars";
 import profileEditTmpl from "./profileEdit.tmpl";
 import './profileEdit.scss';
 import input from '../../../../components/input';
@@ -6,7 +6,7 @@ import button from '../../../../components/button';
 
 
 export default function profileEdit() {
-    const tmpl = new Templator(profileEditTmpl);
+    const tmpl = Handlebars.compile(profileEditTmpl);
 
     const context = {
 
@@ -61,7 +61,5 @@ export default function profileEdit() {
         button: button({ body: "Сохранить" })
     };
 
-    const renderedTemplate = tmpl.compile(context);
-
-    return renderedTemplate;
+    return tmpl(context);
 }

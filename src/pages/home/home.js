@@ -1,4 +1,4 @@
-import Templator from "../../utils/templator";
+import Handlebars from "handlebars";
 import homePageTmpl from "./home.tmpl";
 import login from './modules/login';
 import registration from './modules/registration';
@@ -6,8 +6,7 @@ import registration from './modules/registration';
 import './home.scss';
 
 export default function homePage(inner = "login") {
-    const tmpl = new Templator(homePageTmpl);
-    let context = {};
+    const tmpl = Handlebars.compile(homePageTmpl);
 
     switch (inner) {
         case "registration":
@@ -19,7 +18,5 @@ export default function homePage(inner = "login") {
             break;
     }
 
-    const renderedTemplate = tmpl.compile(context);
-
-    return renderedTemplate;
+    return tmpl(context);
 }

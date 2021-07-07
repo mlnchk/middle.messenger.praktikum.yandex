@@ -1,4 +1,4 @@
-import Templator from "../../../../utils/templator";
+import Handlebars from "handlebars";
 import profileViewTmpl from "./profileView.tmpl.js";
 import './profileView.scss';
 import input from '../../../../components/input';
@@ -6,7 +6,7 @@ import button from '../../../../components/button';
 
 
 export default function profileView() {
-    const tmpl = new Templator(profileViewTmpl);
+    const tmpl = Handlebars.compile(profileViewTmpl);
 
     const context = {
 
@@ -66,7 +66,5 @@ export default function profileView() {
         })
     };
 
-    const renderedTemplate = tmpl.compile(context);
-
-    return renderedTemplate;
+    return tmpl(context);
 }

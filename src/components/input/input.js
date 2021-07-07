@@ -1,4 +1,4 @@
-import Templator from "../../utils/templator";
+import Handlebars from "handlebars";
 import inputTmpl from "./input.tmpl.js";
 import inputProfile from "./inputProfile.tmpl.js";
 import './input.scss';
@@ -13,12 +13,10 @@ export default function input({ name, text, type = "text", value = null, require
             break;
     }
 
-    const tmpl = new Templator(template);
+    const tmpl = Handlebars.compile(template);
 
     const context = { name, text, type, required, value, disabled, errorMessage };
 
-    const renderedTemplate = tmpl.compile(context);
-
-    return renderedTemplate;
+    return tmpl(context);
 
 }

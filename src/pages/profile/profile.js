@@ -1,19 +1,24 @@
-import Templator from "../../utils/templator";
+import Handlebars from "handlebars";
 import profilePageTmpl from "./profile.tmpl";
 import profileView from "./modules/profileView";
 import profileEdit from "./modules/profileEdit";
+import passwordEdit from "./modules/passwordEdit";
 
 import './profile.scss';
 
 export default function profilePage(inner = "profileView") {
-    const tmpl = new Templator(profilePageTmpl);
+    const tmpl = Handlebars.compile(profilePageTmpl);
     let context = {};
 
     switch (inner) {
         case "profileEdit":
             context = {
-                header: "Иван",
                 content: profileEdit
+            }
+            break;
+        case "passwordEdit":
+            context = {
+                content: passwordEdit
             }
             break;
         default:
@@ -21,7 +26,5 @@ export default function profilePage(inner = "profileView") {
             break;
     }
 
-    const renderedTemplate = tmpl.compile(context);
-
-    return renderedTemplate;
+    return tmpl(context);
 }

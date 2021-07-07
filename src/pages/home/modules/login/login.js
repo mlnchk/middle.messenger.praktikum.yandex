@@ -1,4 +1,4 @@
-import Templator from "../../../../utils/templator";
+import Handlebars from "handlebars";
 import loginTmpl from "./login.tmpl.js";
 import './login.scss';
 import input from '../../../../components/input';
@@ -6,7 +6,7 @@ import button from '../../../../components/button';
 
 
 export default function login() {
-    const tmpl = new Templator(loginTmpl);
+    const tmpl = Handlebars.compile(loginTmpl);
 
     const context = {
         loginInput: input({
@@ -27,7 +27,6 @@ export default function login() {
         })
     };
 
-    const renderedTemplate = tmpl.compile(context);
 
-    return renderedTemplate;
+    return tmpl(context);
 }

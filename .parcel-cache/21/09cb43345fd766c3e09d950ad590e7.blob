@@ -1,7 +1,0 @@
-var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-_parcelHelpers.defineInteropFlag(exports);
-_parcelHelpers.export(exports, "default", function () {
-  return _loginDefault.default;
-});
-var _login = require('./login');
-var _loginDefault = _parcelHelpers.interopDefault(_login);

@@ -1,23 +1,26 @@
 @import '../../mixins';
 
 .input {
-    margin-top: 16px;
-
-    &__label {
-        font-size: 9px;
-        line-height: 9px;
-        display: block;
-        color: var(--light-color);
-    }
+    // margin-top: 16px;
 
     &__input {
-        margin-top: 8px;
+        position: relative;
         width: 100%;
         border: none;
         outline: none;
         border-bottom: 1px solid var(--primary-color);
-        padding-bottom: 7px;
+        padding-bottom: 6px;
+        padding-top: 22px;
         background-color: transparent;
+
+        &:focus::placeholder {
+            display: block;
+            position: absolute;
+            top: 8px;
+            font-size: 9px;
+            line-height: 9px;
+            transition: all 0.3s;
+        }
     }
 
     &__error-message {
@@ -29,7 +32,6 @@
 
     &-profile {
         position: relative;
-        // margin-top: 16px;
 
         &__label {
             display: block;
@@ -49,6 +51,7 @@
             background-color: transparent;
             text-align: right;
             padding-left: 90px;
+            color: #999999;
         }
 
         &__error-message {

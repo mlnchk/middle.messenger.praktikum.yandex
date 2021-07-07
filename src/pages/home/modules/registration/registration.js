@@ -1,4 +1,4 @@
-import Templator from "../../../../utils/templator";
+import Handlebars from "handlebars";
 import registrationTmpl from "./registration.tmpl.js";
 import './registration.scss';
 import input from '../../../../components/input';
@@ -6,7 +6,7 @@ import button from '../../../../components/button';
 
 
 export default function registration() {
-    const tmpl = new Templator(registrationTmpl);
+    const tmpl = Handlebars.compile(registrationTmpl);
 
     const context = {
 
@@ -51,7 +51,5 @@ export default function registration() {
         button: button({ body: "Зарегистрироваться" })
     };
 
-    const renderedTemplate = tmpl.compile(context);
-
-    return renderedTemplate;
+    return tmpl(context);
 }

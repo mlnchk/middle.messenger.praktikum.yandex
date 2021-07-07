@@ -6,6 +6,9 @@ const inputProfileTmpl =
             name="{{ name }}" 
             required="{{ required }}"
             value = "{{ value }}"
+            {{#if disabled}}
+                disabled
+            {{/if}}
             class="input-profile__input" />
         <div class="input-profile__error-message hide">{{ errorMessage }}</div>
     </div>
