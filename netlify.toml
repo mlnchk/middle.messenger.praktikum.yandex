@@ -14,3 +14,39 @@ from = "/registration"
 to = "/"
 status = 200
 force = true
+
+[[redirects]]
+from = "/chat-page"
+to = "/"
+status = 200
+force = true
+
+[[redirects]]
+from = "/404"
+to = "/"
+status = 200
+force = true
+
+[[redirects]]
+from = "/500"
+to = "/"
+status = 200
+force = true
+
+[[redirects]]
+from = "/profile"
+to = "/"
+status = 200
+force = true
+
+[[redirects]]
+from = "/profile-edit"
+to = "/"
+status = 200
+force = true
+
+[[redirects]]
+from = "/password-edit"
+to = "/"
+status = 200
+force = true
