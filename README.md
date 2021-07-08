@@ -11,7 +11,6 @@
 Netlify - [https://garipova.netlify.app/]
 
 Pull request - [https://github.com/diglibum/middle.messenger.praktikum.yandex/pull/1]
-или https://github.com/diglibum/middle.messenger.praktikum.yandex/pull/1/commits/14459d78a11112925aaf9a133f07974f7ffc42fb ?
 
 
 ## Страницы
