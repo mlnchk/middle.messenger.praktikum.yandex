@@ -1,1 +1,1 @@
-export { default } from './profileEdit';
+export { profileEdit } from "./profileEdit";

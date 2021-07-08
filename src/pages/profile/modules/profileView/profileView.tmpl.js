@@ -1,4 +1,4 @@
-const profileViewTmpl =
+export default
     `
         <div class="profile-view">
             {{{ mailInput }}}
@@ -14,5 +14,3 @@ const profileViewTmpl =
             <div class="profile-view__link profile-view__link_logout"><a href="/">Выйти</a></div>
         </div>
     `;
-
-export default profileViewTmpl;

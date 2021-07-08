@@ -10,14 +10,16 @@
 
 Netlify - [https://garipova.netlify.app/]
 
+Pull request - [https://github.com/diglibum/middle.messenger.praktikum.yandex/pull/1]
+
 
 ## Страницы
 Страницы доступны по ссылкам:
 - /
-- /registration
-- /chat-page
-- /404
-- /500
-- /profile
-- /profile-edit
-- /password-edit
+- /registration/
+- /chat-page/
+- /500/
+- /profile/
+- /profile-edit/
+- /password-edit/
+- /404 - по умолчанию

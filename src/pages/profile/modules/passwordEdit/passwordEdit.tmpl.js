@@ -1,14 +1,11 @@
-const profileEditTmpl =
+export default
     `
         <div class="password-edit">
-            {{{ inputs.oldPassword }}}
-            {{{ inputs.newPassword }}}
-            {{{ inputs.repeatPassword }}}
-
+            {{{ oldPassword }}}
+            {{{ newPassword }}}
+            {{{ repeatPassword }}}
             <div class="password-edit__button">
                 {{{ button }}}
             </div>
         </div>
     `;
-
-export default profileEditTmpl;

@@ -1,6 +1,6 @@
-import noAvatar from './noAvatar.svg';
+import noAvatar from "./noAvatar.svg";
 
-const profilePageTmpl =
+export default
     `
     <div class="profile-page">
         <div class="profile-page__aside">
@@ -18,6 +18,3 @@ const profilePageTmpl =
         </div>
     </div>
 `;
-
-
-export default profilePageTmpl;

@@ -1,32 +1,30 @@
 import Handlebars from "handlebars";
 import loginTmpl from "./login.tmpl.js";
-import './login.scss';
-import input from '../../../../components/input';
-import button from '../../../../components/button';
+import "./login.scss";
+import { Input } from "../../../../components/input";
+import { Button } from "../../../../components/button";
 
+export function login() {
 
-export default function login() {
     const tmpl = Handlebars.compile(loginTmpl);
-
     const context = {
-        loginInput: input({
+        loginInput: Input({
             name: "login",
             text: "Логин",
             required: true,
             errorMessage: "Неверный логин"
         }),
-        passwordInput: input({
+        passwordInput: Input({
             name: "password",
             text: "Пароль",
             type: "password",
             required: true,
             errorMessage: "Неверный пароль"
         }),
-        button: button({
+        button: Button({
             body: "Авторизоваться"
         })
     };
-
 
     return tmpl(context);
 }

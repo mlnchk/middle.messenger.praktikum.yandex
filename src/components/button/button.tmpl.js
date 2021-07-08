@@ -1,8 +1,6 @@
-const buttonTmpl =
+export default
     `
         <button class="button">
         {{ body }}
         </button>
     `;
-
-export default buttonTmpl;

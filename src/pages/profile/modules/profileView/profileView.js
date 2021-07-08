@@ -1,15 +1,13 @@
 import Handlebars from "handlebars";
 import profileViewTmpl from "./profileView.tmpl.js";
-import './profileView.scss';
-import input from '../../../../components/input';
+import "./profileView.scss";
+import { Input } from "../../../../components/input";
 
+export function profileView() {
 
-export default function profileView() {
     const tmpl = Handlebars.compile(profileViewTmpl);
-
     const context = {
-
-        mailInput: input({
+        mailInput: Input({
             name: "email",
             text: "Почта",
             value: "pochta@yandex.ru",
@@ -17,43 +15,43 @@ export default function profileView() {
             disabled: true,
             type: "email",
             errorMessage: "Неверная почта",
-            className: "profile"
+            isProfile: true
         }),
-        loginInput: input({
+        loginInput: Input({
             name: "login",
             text: "Логин",
             value: "ivanivanov",
             required: true,
             disabled: true,
             errorMessage: "Неверный логин",
-            className: "profile"
+            isProfile: true
         }),
-        firstNameInput: input({
+        firstNameInput: Input({
             name: "first_name",
             text: "Имя",
             value: "Иван",
             required: true,
             disabled: true,
             errorMessage: "Неверное имя",
-            className: "profile"
+            isProfile: true
         }),
-        secondNameInput: input({
+        secondNameInput: Input({
             name: "second_name",
             text: "Фамилия",
             value: "Иванов",
             disabled: true,
             errorMessage: "Неверная фамилия",
-            className: "profile"
+            isProfile: true
         }),
-        displayNameInput: input({
+        displayNameInput: Input({
             name: "display_name",
             text: "Имя в чате",
             value: "Ивашка",
             disabled: true,
             errorMessage: "Неверное имя в чате",
-            className: "profile"
+            isProfile: true
         }),
-        phoneInput: input({
+        phoneInput: Input({
             name: "phone",
             text: "Телефон",
             value: "+7 (909) 967 30 30",
@@ -61,7 +59,7 @@ export default function profileView() {
             required: true,
             disabled: true,
             errorMessage: "Неверный телефон",
-            className: "profile"
+            isProfile: true
         })
     };
 

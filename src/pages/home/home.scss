@@ -1,4 +1,4 @@
-@import '../../mixins';
+@import "../../mixins";
 
 .home-page {
     display: flex;
@@ -12,7 +12,7 @@
         @include shadow-block;
         width: 340px;
         background: #FFFFFF;
-        padding: 30px 50px;
+        padding: 30px;
         min-height: 460px;
     }
 

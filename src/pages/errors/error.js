@@ -1,11 +1,10 @@
 import Handlebars from "handlebars";
 import errorPageTmpl from "./error.tmpl";
+import "./error.scss";
 
-import './error.scss';
+export function errorPage(errorCode) {
 
-export default function errorPage(errorCode) {
     const tmpl = Handlebars.compile(errorPageTmpl);
-
     let context = {};
 
     switch (errorCode) {
@@ -22,5 +21,6 @@ export default function errorPage(errorCode) {
             }
             break;
     }
+
     return tmpl(context);
 }

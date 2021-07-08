@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
 
 * {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
     color: #1E1E1E;
@@ -27,8 +27,7 @@ body {
     --error-color: #FF2F2F;
     --bg-color-light: #FBFBFB;
     --bg-color-dark: #EFEFEF;
-
-    --primary-font-family: 'Open Sans', sans-serif;
+    --primary-font-family: "Inter", sans-serif;
 }
 
 a {

@@ -1,54 +1,52 @@
 import Handlebars from "handlebars";
 import registrationTmpl from "./registration.tmpl.js";
-import './registration.scss';
-import input from '../../../../components/input';
-import button from '../../../../components/button';
+import "./registration.scss";
+import { Input } from "../../../../components/input";
+import { Button } from "../../../../components/button";
 
+export function registration() {
 
-export default function registration() {
     const tmpl = Handlebars.compile(registrationTmpl);
-
     const context = {
-
-        mailInput: input({
+        mailInput: Input({
             name: "email",
             text: "Почта",
             required: true,
             type: "email",
             errorMessage: "Неверная почта"
         }),
-        loginInput: input({
+        loginInput: Input({
             name: "login",
             text: "Логин",
             required: true,
             errorMessage: "Неверный логин"
         }),
-        firstNameInput: input({
+        firstNameInput: Input({
             name: "first_name",
             text: "Имя",
             required: true,
             errorMessage: "Неверное имя"
         }),
-        secondNameInput: input({
+        secondNameInput: Input({
             name: "second_name",
             text: "Фамилия",
             errorMessage: "Неверная фамилия"
         }),
-        phoneInput: input({
+        phoneInput: Input({
             name: "phone",
             text: "Телефон",
             type: "tel",
             required: true,
             errorMessage: "Неверный телефон"
         }),
-        passwordInput: input({
+        passwordInput: Input({
             name: "password",
             text: "Пароль",
             type: "password",
             required: true,
             errorMessage: "Неверный пароль"
         }),
-        button: button({ body: "Зарегистрироваться" })
+        button: Button({ body: "Зарегистрироваться" })
     };
 
     return tmpl(context);

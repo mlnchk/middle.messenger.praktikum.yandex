@@ -1,4 +1,4 @@
-const profileEditTmpl =
+export default
     `
         <div class="profile-edit">
             {{{ mailInput }}}
@@ -7,11 +7,8 @@ const profileEditTmpl =
             {{{ secondNameInput }}}
             {{{ displayNameInput }}}
             {{{ phoneInput }}}
-
             <div class="profile-edit__button">
                 {{{ button }}}
             </div>
         </div>
     `;
-
-export default profileEditTmpl;

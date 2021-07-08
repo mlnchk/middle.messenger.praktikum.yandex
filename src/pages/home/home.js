@@ -1,11 +1,11 @@
 import Handlebars from "handlebars";
 import homePageTmpl from "./home.tmpl";
-import login from './modules/login';
-import registration from './modules/registration';
+import "./home.scss";
+import { login } from "./modules/login";
+import { registration } from "./modules/registration";
 
-import './home.scss';
+export function homePage(inner = "login") {
 
-export default function homePage(inner = "login") {
     const tmpl = Handlebars.compile(homePageTmpl);
     let context = {};
 
@@ -13,7 +13,6 @@ export default function homePage(inner = "login") {
         case "registration":
             context = { header: "Регистрация", content: registration };
             break;
-
         default:
             context = { header: "Вход", content: login }
             break;

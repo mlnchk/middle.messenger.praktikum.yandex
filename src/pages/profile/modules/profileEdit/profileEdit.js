@@ -1,64 +1,62 @@
 import Handlebars from "handlebars";
 import profileEditTmpl from "./profileEdit.tmpl";
-import './profileEdit.scss';
-import input from '../../../../components/input';
-import button from '../../../../components/button';
+import "./profileEdit.scss";
+import { Input } from "../../../../components/input";
+import { Button } from "../../../../components/button";
 
+export function profileEdit() {
 
-export default function profileEdit() {
     const tmpl = Handlebars.compile(profileEditTmpl);
-
     const context = {
-
-        mailInput: input({
+        mailInput: Input({
             name: "email",
             text: "Почта",
             value: "pochta@yandex.ru",
             required: true,
             type: "email",
             errorMessage: "Неверная почта",
-            className: "profile"
+            isProfile: true
         }),
-        loginInput: input({
+        loginInput: Input({
             name: "login",
             text: "Логин",
             value: "ivanivanov",
             required: true,
             errorMessage: "Неверный логин",
-            className: "profile"
+            isProfile: true
         }),
-        firstNameInput: input({
+        firstNameInput: Input({
             name: "first_name",
             text: "Имя",
             value: "Иван",
             required: true,
             errorMessage: "Неверное имя",
-            className: "profile"
+            isProfile: true
         }),
-        secondNameInput: input({
+        secondNameInput: Input({
             name: "second_name",
             text: "Фамилия",
             value: "Иванов",
             errorMessage: "Неверная фамилия",
-            className: "profile"
+            isProfile: true
         }),
-        displayNameInput: input({
+        displayNameInput: Input({
             name: "display_name",
             text: "Имя в чате",
             value: "Ивашка",
             errorMessage: "Неверное имя в чате",
-            className: "profile"
+            isProfile: true
         }),
-        phoneInput: input({
+        phoneInput: Input({
             name: "phone",
             text: "Телефон",
             value: "+7 (909) 967 30 30",
             type: "tel",
             required: true,
             errorMessage: "Неверный телефон",
-            className: "profile"
+            isProfile: true
         }),
-        button: button({ body: "Сохранить" })
+        button: Button({ body: "Сохранить" })
     };
 
     return tmpl(context);
