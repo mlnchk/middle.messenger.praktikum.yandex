@@ -1,0 +1,1 @@
+export { passwordEdit } from "./passwordEdit";
