@@ -26,7 +26,7 @@ const checkFormInput = (input: HTMLInputElement) => {
   };
 
   if (input != null) {
-    const validationType = (<any>input).getAttribute(["data-validation-type"]);
+    const validationType = input.getAttribute("data-validation-type");
     const type = (validationType != null) ? validationType : "text";
     const value = input.value;
 
@@ -196,7 +196,7 @@ const checkPhoneValidaty = (value: string = "") => {
     minLength: 10,
     maxLength: 50
   };
-  rules.pattern = /^[1-9-+\s]{1,}$/gi;
+  rules.pattern = /^[0-9-+\s()]{1,}$/gi;
 
   const checkList: (string | boolean)[] = [
     checkPattern(value, rules.pattern, "Неверный номер телефона"),

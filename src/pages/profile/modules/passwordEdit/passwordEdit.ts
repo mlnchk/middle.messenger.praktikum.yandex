@@ -83,11 +83,11 @@ export function passwordEdit (): string {
   const form = new Form({
     name: "passwordEditForm",
     body: tmpl(context),
-    // events: {
-    //   submit: (event: Event) => {
-    //     submitFormData(event);
-    //   }
-    // },
+    events: {
+      submit: (event: Event) => {
+        submitFormData(event);
+      }
+    },
     settings: {
       withInternalID: true
     }

@@ -145,8 +145,8 @@ class Block {
     }
 
     _callEventFunction (e: Event, eventFn: Function) {
-      const target = e.target;
-      const dataId = (<any>target).getAttribute(["data-id"]);
+      const target = e.target as HTMLElement;
+      const dataId = target.getAttribute("data-id");
 
       if (target != null) {
         if (dataId === this._id) {
@@ -160,7 +160,7 @@ class Block {
     _removeEvents () {
       const { events = {} } = this.props;
       Object.keys(events).forEach(eventName => {
-        (<any>window).removeEventListener(eventName, (e: Event) => {
+        (document.querySelector("#root") as HTMLElement).removeEventListener(eventName, (e: Event) => {
           this._callEventFunction(e, events[eventName]);
         });
       });
