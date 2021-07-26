@@ -1,1 +1,0 @@
-export { homePage } from "./home";

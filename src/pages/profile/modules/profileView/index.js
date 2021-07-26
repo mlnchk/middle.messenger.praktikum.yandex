@@ -1,1 +1,0 @@
-export { profileView } from "./profileView";

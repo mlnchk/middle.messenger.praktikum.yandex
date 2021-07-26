@@ -1,19 +1,18 @@
 .profile-view {
+  &__links {
+    margin-top: 50px;
+  }
 
-    &__links {
-        margin-top: 50px;
+  &__link {
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px 0;
+
+    &_logout {
+      border-bottom: none;
+
+      a {
+        color: var(--error-color);
+      }
     }
-
-    &__link {
-        border-bottom: 1px solid #EAEAEA;
-        padding: 10px 0px;
-
-        &_logout {
-            border-bottom: none;
-
-            a {
-                color: var(--error-color);
-            }
-        }
-    }
+  }
 }

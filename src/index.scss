@@ -1,65 +1,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
 
 * {
-    font-family: "Inter", sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #1E1E1E;
-    font-weight: 500;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #1e1e1e;
+  font-weight: 500;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-size: 12px;
-    line-height: 15px;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 :root {
-    --primary-color: #29C188;
-    --secondary-color: #46C2F5;
-    --complementary-color: #FFDE6C;
-    --light-color: #999999;
-    --error-color: #FF2F2F;
-    --bg-color-light: #FBFBFB;
-    --bg-color-dark: #EFEFEF;
-    --primary-font-family: "Inter", sans-serif;
+  --primary-color: #29c188;
+  --secondary-color: #46c2f5;
+  --complementary-color: #ffde6c;
+  --light-color: #999;
+  --error-color: #ff2f2f;
+  --bg-color-light: #fbfbfb;
+  --bg-color-dark: #efefef;
+  --primary-font-family: "Inter", sans-serif;
 }
 
 a {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .hide {
-    height: 0;
-    visibility: hidden;
-    opacity: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .arrow-button {
+  width: 28px;
+  height: 28px;
+  background-color: var(--primary-color);
+  color: var(--primary-color);
+  border: none;
+  outline: none;
+  border-radius: 100%;
+  position: relative;
+
+  &::before {
+    position: absolute;
     width: 28px;
     height: 28px;
-    background-color: var(--primary-color);
-    color: var(--primary-color);
-    border: none;
-    outline: none;
-    border-radius: 100%;
-    position: relative;
-
-    &:before {
-        position: absolute;
-        width: 28px;
-        height: 28px;
-        top: 0;
-        left: 0;
-        content: "";
-        background-image: url("data:image/svg+xml,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='13' y='6.80005' width='11' height='1.6' transform='rotate(-180 13 6.80005)' fill='white'/%3E%3Cpath d='M6 11L2 6L6 1' stroke='white' stroke-width='1.6'/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-position: center;
-        cursor: pointer;
-    }
+    top: 0;
+    left: 0;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='13' y='6.80005' width='11' height='1.6' transform='rotate(-180 13 6.80005)' fill='white'/%3E%3Cpath d='M6 11L2 6L6 1' stroke='white' stroke-width='1.6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
 }

@@ -1,15 +1,20 @@
 .button {
-    display: flex;
-    background-color: var(--primary-color);
-    border-radius: 20px;
-    padding: 12px 70px;
-    height: 40px;
-    justify-content: center;
-    outline: none;
-    border: 0;
-    color: #FFFFFF;
-    cursor: pointer;
-    font: 400 13px/13px var(--primary-font-family);
-    font-weight: 500;
-    min-width: 280px;
+  display: flex;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  padding: 12px 70px;
+  height: 40px;
+  justify-content: center;
+  outline: none;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font: 400 13px/13px var(--primary-font-family);
+  font-weight: 500;
+  min-width: 280px;
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: auto;
+  }
 }

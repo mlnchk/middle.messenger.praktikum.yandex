@@ -1,19 +1,19 @@
 .login {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: space-between;
-    min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  min-height: 350px;
 
-    &__registr-link {
-        display: block;
-        text-align: center;
-        margin-top: 14px;
-        font-size: 11px;
-        line-height: 11px;
-    }
+  &__registr-link {
+    display: block;
+    text-align: center;
+    margin-top: 14px;
+    font-size: 11px;
+    line-height: 11px;
+  }
 
-    &__footer {
-        margin-top: 45px;
-    }
+  &__footer {
+    margin-top: 45px;
+  }
 }

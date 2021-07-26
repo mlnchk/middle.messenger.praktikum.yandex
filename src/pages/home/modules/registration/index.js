@@ -1,1 +1,0 @@
-export { registration } from "./registration";

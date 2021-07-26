@@ -1,26 +1,27 @@
 @import "../../mixins";
 
 .home-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 100vh;
 
-    &__container {
-        @include rounded-block;
-        @include shadow-block;
-        width: 340px;
-        background: #FFFFFF;
-        padding: 30px;
-        min-height: 460px;
-    }
+  &__container {
+    @include rounded-block;
+    @include shadow-block;
 
-    &__header {
-        font-weight: 500;
-        font-size: 20px;
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 25px;
-    }
+    width: 340px;
+    background: #fff;
+    padding: 30px;
+    min-height: 460px;
+  }
+
+  &__header {
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
 }

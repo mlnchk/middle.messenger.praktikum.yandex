@@ -1,25 +1,25 @@
 .error-page {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
 
-    &__code {
-        font-size: 40px;
-        line-height: 40px;
-    }
+  &__code {
+    font-size: 40px;
+    line-height: 40px;
+  }
 
-    &__text {
-        margin-top: 20px;
-        font-size: 20px;
-        line-height: 20px;
-    }
+  &__text {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 
-    &__link {
-        margin-top: 69px;
-        font-size: 11px;
-        line-height: 11p
-    }
+  &__link {
+    margin-top: 69px;
+    font-size: 11px;
+    line-height: 11px;
+  }
 }

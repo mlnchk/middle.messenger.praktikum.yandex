@@ -1,1 +1,0 @@
-export { errorPage } from "./error";

@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "target": "es2016",
+        "declaration": false,
+        "module": "ES6",
+        "strictNullChecks": true,
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true
+     }
+} 

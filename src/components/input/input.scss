@@ -1,63 +1,61 @@
-@import "../../mixins";
-
 .input {
+  &__input {
+    position: relative;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--primary-color);
+    padding-bottom: 6px;
+    padding-top: 22px;
+    background-color: transparent;
+
+    &:focus::placeholder {
+      display: block;
+      position: absolute;
+      top: 8px;
+      font-size: 9px;
+      line-height: 9px;
+      transition: all 0.3s;
+    }
+  }
+
+  &__error-message {
+    color: var(--error-color);
+    margin-top: 7px;
+    font-size: 8px;
+    line-height: 8px;
+  }
+
+  &-profile {
+    position: relative;
+
+    &__label {
+      display: block;
+      position: absolute;
+      font-size: 13px;
+      line-height: 13px;
+      top: 3px;
+    }
 
     &__input {
-        position: relative;
-        width: 100%;
-        border: none;
-        outline: none;
-        border-bottom: 1px solid var(--primary-color);
-        padding-bottom: 6px;
-        padding-top: 22px;
-        background-color: transparent;
-
-        &:focus::placeholder {
-            display: block;
-            position: absolute;
-            top: 8px;
-            font-size: 9px;
-            line-height: 9px;
-            transition: all 0.3s;
-        }
+      margin-top: 3px;
+      width: 100%;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 7px;
+      background-color: transparent;
+      text-align: right;
+      padding-left: 90px;
+      color: #999;
     }
 
     &__error-message {
-        color: var(--error-color);
-        margin-top: 7px;
-        font-size: 8px;
-        line-height: 8px;
+      color: var(--error-color);
+      margin-top: 7px;
+      font-size: 8px;
+      line-height: 8px;
+      text-align: center;
     }
-
-    &-profile {
-        position: relative;
-
-        &__label {
-            display: block;
-            position: absolute;
-            font-size: 13px;
-            line-height: 13px;
-            top: 3px;
-        }
-
-        &__input {
-            margin-top: 3px;
-            width: 100%;
-            border: none;
-            outline: none;
-            border-bottom: 1px solid #EAEAEA;
-            padding-bottom: 7px;
-            background-color: transparent;
-            text-align: right;
-            padding-left: 90px;
-            color: #999999;
-        }
-
-        &__error-message {
-            color: var(--error-color);
-            margin-top: 7px;
-            font-size: 8px;
-            line-height: 8px;
-        }
-    }
+  }
 }
