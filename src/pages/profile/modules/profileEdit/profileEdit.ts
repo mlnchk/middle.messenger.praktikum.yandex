@@ -144,11 +144,11 @@ export function profileEdit (): string {
   const form = new Form({
     name: "profileEditForm",
     body: tmpl(context),
-    events: {
-      submit: (event: Event) => {
-        submitFormData(event);
-      }
-    },
+    // events: {
+    //   submit: (event: Event) => {
+    //     submitFormData(event);
+    //   }
+    // },
     settings: {
       withInternalID: true
     },
