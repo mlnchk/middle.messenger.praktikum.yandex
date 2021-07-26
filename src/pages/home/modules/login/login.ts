@@ -46,16 +46,16 @@ export function login () {
     }
   }).toString();
 
-  const button = new Button({
+  const btn = new Button({
     text: "Авторизоваться",
     type: "submit",
     disabled: true
-  }).toString();
+  });
 
   const context = {
     loginInput,
     passwordInput,
-    button
+    button: btn.toString()
   };
 
   const form = new Form({
