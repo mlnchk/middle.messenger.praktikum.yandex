@@ -13,7 +13,6 @@ export function profileView (): string {
     required: true,
     disabled: true,
     type: "email",
-    errorMessage: "Неверная почта",
     isProfile: true
   }).toString();
 
@@ -23,7 +22,6 @@ export function profileView (): string {
     value: "ivanivanov",
     required: true,
     disabled: true,
-    errorMessage: "Неверный логин",
     isProfile: true
   }).toString();
 
@@ -33,7 +31,6 @@ export function profileView (): string {
     value: "Иван",
     required: true,
     disabled: true,
-    errorMessage: "Неверное имя",
     isProfile: true
   }).toString();
 
@@ -42,7 +39,6 @@ export function profileView (): string {
     text: "Фамилия",
     value: "Иванов",
     disabled: true,
-    errorMessage: "Неверная фамилия",
     isProfile: true
   }).toString();
 
@@ -51,7 +47,6 @@ export function profileView (): string {
     text: "Имя в чате",
     value: "Ивашка",
     disabled: true,
-    errorMessage: "Неверное имя в чате",
     isProfile: true
   }).toString();
 
@@ -62,7 +57,6 @@ export function profileView (): string {
     type: "tel",
     required: true,
     disabled: true,
-    errorMessage: "Неверный телефон",
     isProfile: true
   }).toString();
 

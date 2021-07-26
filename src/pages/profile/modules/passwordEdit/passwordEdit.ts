@@ -4,7 +4,7 @@ import "./passwordEdit.scss";
 import { Input } from "../../../../components/input";
 import { Button } from "../../../../components/button";
 import { Form } from "../../../../components/form";
-import { submitFormData } from "../../../../components/form/utils";
+import { submitFormData, formValidation } from "../../../../components/form/utils";
 
 export function passwordEdit (): string {
   const tmpl = Handlebars.compile(passwordEditTmpl);
@@ -14,16 +14,39 @@ export function passwordEdit (): string {
     text: "Старый пароль",
     type: "password",
     required: true,
-    errorMessage: "Неверный пароль",
-    isProfile: true
+    validationType: "password",
+    isProfile: true,
+    events: {
+      focus: (event: Event) => {
+        formValidation(event);
+      },
+      blur: (event: Event) => {
+        formValidation(event);
+      },
+      input: (event: Event) => {
+        formValidation(event);
+      }
+    }
   }).toString();
 
   const newPassword = new Input({
     name: "newPassword",
     text: "Новый пароль",
     type: "password",
+    validationType: "password",
     required: true,
-    isProfile: true
+    isProfile: true,
+    events: {
+      focus: (event: Event) => {
+        formValidation(event);
+      },
+      blur: (event: Event) => {
+        formValidation(event);
+      },
+      input: (event: Event) => {
+        formValidation(event);
+      }
+    }
   }).toString();
 
   const repeatPassword = new Input({
@@ -31,8 +54,19 @@ export function passwordEdit (): string {
     text: "Повторите новый пароль",
     type: "password",
     required: true,
-    errorMessage: "Пароли не совпадают",
-    isProfile: true
+    validationType: "password",
+    isProfile: true,
+    events: {
+      focus: (event: Event) => {
+        formValidation(event);
+      },
+      blur: (event: Event) => {
+        formValidation(event);
+      },
+      input: (event: Event) => {
+        formValidation(event);
+      }
+    }
   }).toString();
 
   const btn = new Button({
