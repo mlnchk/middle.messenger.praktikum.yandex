@@ -1,1 +1,3 @@
-export { registration } from "./registration";
+import { registration } from "./registration";
+
+export { registration };

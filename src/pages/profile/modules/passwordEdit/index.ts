@@ -1,1 +1,3 @@
-export { passwordEdit } from "./passwordEdit";
+import { passwordEdit } from "./passwordEdit";
+
+export { passwordEdit };
