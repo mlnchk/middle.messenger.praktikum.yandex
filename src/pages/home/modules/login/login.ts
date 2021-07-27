@@ -2,7 +2,7 @@ import Handlebars from "handlebars";
 import loginTmpl from "./login.tmpl";
 import "./login.scss";
 import { Input } from "../../../../components/input/Input";
-import { Button } from "../../../../components/button";
+import { Button } from "../../../../components/button/Button";
 import { Form } from "../../../../components/form";
 import {
   submitFormData,
