@@ -1,12 +1,15 @@
 import Handlebars from "handlebars";
 import loginTmpl from "./login.tmpl";
 import "./login.scss";
-import { Input } from "../../../../components/input";
+import { Input } from "../../../../components/input/Input";
 import { Button } from "../../../../components/button";
 import { Form } from "../../../../components/form";
-import { submitFormData, formValidation } from "../../../../components/form/utils";
+import {
+  submitFormData,
+  formValidation,
+} from "../../../../components/form/utils";
 
-export function login () {
+export function login() {
   const tmpl = Handlebars.compile(loginTmpl);
 
   const loginInput = new Input({
@@ -23,8 +26,8 @@ export function login () {
       },
       input: (event: Event) => {
         formValidation(event);
-      }
-    }
+      },
+    },
   }).toString();
 
   const passwordInput = new Input({
@@ -42,20 +45,20 @@ export function login () {
       },
       input: (event: Event) => {
         formValidation(event);
-      }
-    }
+      },
+    },
   }).toString();
 
   const btn = new Button({
     text: "Авторизоваться",
     type: "submit",
-    disabled: true
+    disabled: true,
   });
 
   const context = {
     loginInput,
     passwordInput,
-    button: btn.toString()
+    button: btn.toString(),
   };
 
   const form = new Form({
@@ -64,12 +67,12 @@ export function login () {
     events: {
       submit: (event: Event) => {
         submitFormData(event);
-      }
+      },
     },
     novalidate: true,
     settings: {
-      withInternalID: true
-    }
+      withInternalID: true,
+    },
   });
 
   return form.toString();
